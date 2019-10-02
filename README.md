@@ -14,14 +14,17 @@ sudo pip3 install --no-cache melopero-autostart
 On install the module will create a new directory under your /home/ folder : /home/melopero-autostart/ .
 The directory is organized as folllows:
 
-/home/melopero-autostart/
-    StartScripts.sh
-    instructions.txt
-    scripts/
-    uninstall/
-        uninstall-instructions.txt
-        uninstall.sh
-
+```bash
+melopero-autostart
+├── StartScripts.sh
+├── instructions.txt
+├── scripts/
+|   └── (put your scripts here)
+|
+└── uninstall/
+    ├── uninstall-instructions.txt
+    └── uninstall.sh
+```
 Furthermore it will copy a system service unit in your /etc/systemd/system/ folder and enable it. This system service will start the StartScripts.sh script at startup. 
 
 ### Usage

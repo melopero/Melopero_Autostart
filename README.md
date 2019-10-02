@@ -3,7 +3,7 @@
 ## Getting Started
 ### Prerequisites
 You will need:
-- a python3 version, which you can get here: download python3
+- a python3 version, which you can get here: [download python3](https://www.python.org/downloads/)
 - a linux distro with systemd
     
 ### Installing

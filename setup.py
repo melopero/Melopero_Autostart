@@ -1,4 +1,9 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
+"""
+@author: Leonardo La Rocca
+"""
+
 import setuptools
 import pkg_resources
 import os
@@ -14,6 +19,7 @@ def setup_system_service():
     autostart_dir = "/home/melopero-autostart/"
     scripts_dir = os.path.join(autostart_dir, "scripts/")
     uninstall_dir = os.path.join(autostart_dir, "uninstall/")
+    uninstall_scripts_dir = os.path.join(uninstall_dir, "uninstall-scripts/")
     
     bash_script_name = "StartScripts.sh"
     instructions_name = "instructions.txt"
@@ -33,6 +39,9 @@ def setup_system_service():
         
     if not os.path.exists(uninstall_dir):
         os.mkdir(uninstall_dir)
+        
+    if not os.path.exists(uninstall_scripts_dir):
+        os.mkdir(uninstall_scripts_dir)
         
     #copy bash script in autostart dir and instructions
     copyfile_and_chmod(bash_script_name, autostart_dir, mode = 0o554)
@@ -87,9 +96,9 @@ class InstallCommand(install):
 
 setuptools.setup(
     name="melopero_autostart",
-    version="0.0.6",
+    version="0.1.0",
     description="Melopero Autostart, easily run python scripts at startup",
-    #url="https://github.com/melopero/Melopero_AMG8833/tree/master/module",
+    url="https://github.com/melopero/Melopero_Autostart",
     author="Melopero",
     author_email="info@melopero.com",
     license="MIT",

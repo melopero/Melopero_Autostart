@@ -22,7 +22,7 @@ touch "$LOG"
 chmod 664 "$LOG"
 fi
 
-nohup python3 -u  "${DIR}${script}" > "$LOG" &
+nohup python3 -u  "${DIR}${script}" &> "$LOG" &
 
 fi
 done
